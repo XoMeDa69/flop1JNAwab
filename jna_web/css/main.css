@@ -1,11 +1,112 @@
+:root {
+    --primary-color: #1e88e5;
+    --secondary-color: #00acc1;
+    --accent-color: #3949ab;
+    --background-color: #05182a;
+    --text-color: #e0f2f1;
+    --nav-bg-color: rgba(5, 24, 42, 0.5);
+    --section-bg-color: rgba(18, 38, 63, 0.8);
+}
+
+body {
+    font-family: 'Inter', 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .navi {
     background-color: #8957e6;
 }
-
+ 
 .core  {
     background-color: #323233;
 }
 
 p{
     color: white;
+}
+
+main {
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--nav-bg-color);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+    animation: pulse 2s infinite;
+}
+
+.navbar h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links button {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-links button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--secondary-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-links button:hover::after,
+.nav-links li.active button::after {
+    transform: scaleX(1);
 }

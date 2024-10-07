@@ -7,19 +7,24 @@
 	<link href="css\main.css" rel="stylesheet">
 </head>
 <body class="core">
-	<div>
-		<nav class="navi">
-			<div>
-				<h1>JNA</h1> <center><h1>PAGE D'ACCEUIL</h1></center>
-			</div>
-			<div>
-				<button class="btn_nav">ACCUEIL</button>
-				<button class="btn_nav">JEUX</button>
-				<button class="btn_nav">CONTACT</button>
-			</div>
-		</nav>
-	</div>
-	</br>
+	<nav class="navbar">
+		<h1>JNA</h1>
+		<ul class="nav-links">
+			<li>
+				<button>ACCUEIL</button>
+			</li>
+			<li>
+				<button>JEUX</button>
+			</li>
+			<li>
+				<button>CONTACT</button>
+			</li>
+		</ul>
+	</nav>
+
+	<!-- Mettre TOUT le contenu de la page dans UNE SEULE DIV
+	 Cela te permettra de pouvoir changer dynamiquement la page sans devoir la recharger avec du JS et des fichiers HTML
+	 Et de pouvoir mettre du CSS global sur ton container et de le séparer proprement de la NAVBar -->
 	<div>
 		<img src="image\image1.jpg" alt="">
 		<div>
